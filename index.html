@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript" src="progressbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="./progressbar.css">
+</head>
+<body>
+
+<div id="progressBar1"></div><br/>
+<div id="progressBar2"></div><br/>
+<div id="progressBar3"></div><br/>
+	<script>
+        
+        $('#progressBar1').progressBar({
+            step : 10,
+            color : 'red',
+            percent : 20
+        });
+        $('#progressBar2').progressBar();
+        $('#progressBar3').progressBar({
+            step : 20,
+            color : 'green',
+            percent : 50
+        });
+        setTimeout(function()
+        {
+            $('#progressBar1').progressBar('inc');
+            $('#progressBar2').progressBar('set',70);
+            $('#progressBar3').progressBar('dec');
+        },2000);
+	</script>
+</body>
+</html>
